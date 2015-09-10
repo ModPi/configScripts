@@ -50,6 +50,7 @@ apt-get update
 apt-get upgrade
 apt-get install chromium
 apt-get install python-dev
+apt-get install wmctrl
 
 #get our directories
 git clone https://github.com/ModPi/minecraftModChooser.git
@@ -66,7 +67,7 @@ echo "@/home/pi/configScripts/fullscreen.sh" >> /etc/xdg/lxsession/LXDE-pi/autos
 cd $working
 echo "Pi must be restarted for changes to take effect. Restart now? (y/n)"
 read input
-if [ input == "y" ]
+if [ $input == "y" ]
 then
   reboot
 fi
