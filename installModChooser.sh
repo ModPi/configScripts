@@ -64,4 +64,11 @@ echo "@minecraft-pi" >> /etc/xdg/lxsession/LXDE-pi/autostart
 echo "@/home/pi/configScripts/fullscreen.sh" >> /etc/xdg/lxsession/LXDE-pi/autostart
 
 cd $working
+echo "Pi must be restarted for changes to take effect. Restart now? (y/n)"
+read input
+if [ input == "y" ]
+then
+  reboot
+fi
+
 exit 0
