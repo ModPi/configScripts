@@ -46,11 +46,11 @@ working=`pwd`
 cd /home/pi
 
 #get necessary dependencies
-apt-get update
-apt-get upgrade
-apt-get install chromium
-apt-get install python-dev
-apt-get install wmctrl
+apt-get --yes --force-yes update
+apt-get --yes --force-yes upgrade
+apt-get --yes --force-yes install chromium
+apt-get --yes --force-yes install python-dev
+apt-get --yes --force-yes install wmctrl
 
 #get our directories
 git clone https://github.com/ModPi/minecraftModChooser.git
@@ -63,6 +63,10 @@ echo "exit 0" >> /etc/rc.local
 echo "@chromium /home/pi/piblockly/blockly/apps/code/index.html" >> /etc/xdg/lxsession/LXDE-pi/autostart
 echo "@minecraft-pi" >> /etc/xdg/lxsession/LXDE-pi/autostart
 echo "@/home/pi/configScripts/fullscreen.sh" >> /etc/xdg/lxsession/LXDE-pi/autostart
+
+#make user mod folder and add a simple mod to it
+mkdir /home/pi/userMods
+echo "print 'Hello World!'" > /home/pi/userMods/helloWorld.txt
 
 cd $working
 echo "Pi must be restarted for changes to take effect. Restart now? (y/n)"
