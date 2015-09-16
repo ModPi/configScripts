@@ -1,5 +1,5 @@
 # configScripts - start here for ModPi installation
-To turn your Raspberry Pi running raspian into a Minecraft Pi Modding machine, clone this repo to your raspberry pi, then run the installation script. Once it is complete (it may take a while) reboot your pi and have fun!
+To turn your Raspberry Pi (running raspian) into a Minecraft Pi Modding machine, clone this repo to your raspberry pi, then run the installation script. Once it is complete (it may take a while) reboot your pi and have fun!
 
 Prerequisites:
 1. Your OS should be raspian.
