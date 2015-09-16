@@ -26,7 +26,7 @@ then
   exit 1
 fi
 
-curl http://www.google.com &> /dev/null
+ping -c 1 www.google.com &> /dev/null
 if [ $? -ne 0 ]
 then
   echo "Please connect to the internet."
